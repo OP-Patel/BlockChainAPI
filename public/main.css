@@ -1,3 +1,25 @@
 .addFont{
     font-family: 'Playfair Display', serif;
 }
+
+.mainBody{
+    border: 2px solid black;
+    display: inline-flex; 
+    justify-content: center;
+    align-content: center;
+
+}
+
+label{
+    padding-top: 5%;
+}
+
+#middle-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#token{
+    margin-left: 5%;
+}
