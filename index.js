@@ -41,7 +41,7 @@ app.post("/submit", async (req, res)=>{
         res.render("submit.ejs", { error: error.message });
       }
     }else{
-      res.render("index.ejs", {allNames: totalSyms});
+      res.redirect("/");
     }
 });
 
