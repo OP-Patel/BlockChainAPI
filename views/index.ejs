@@ -8,7 +8,101 @@
             <input class = "addFont btn btn-success m-2 mb-3" type = "submit">
         </form>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>    
+<div class ="mainBody">
+    <div class="container">
+        <h5 class= "addFont"> Supported symbols: </h5>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-3 border-bottom">
+            <div class="col m-1">
+                <ul class = "list-unstyled">
+                    <% for( let index = 0; index < 20; index++ ) { %>
+                        <li class="addFont"> <%= allNames[index] %></li>
+                    <% } %>    
+                </ul>
+            </div>
+            <div class="col m-1">
+                <ul class = "list-unstyled">
+                    <% for( let index = 20; index < 40; index++ ) { %>
+                        <li class="addFont"> <%= allNames[index] %></li>
+                    <% } %>    
+                </ul>
+            </div>
+            <div class="col m-1">
+                <ul class = "list-unstyled">
+                    <% for( let index = 40; index < 60; index++ ) { %>
+                        <li class="addFont"> <%= allNames[index] %></li>
+                    <% } %>    
+                </ul>
+            </div>
+            <div class="col m-1">
+                <ul class = "list-unstyled">
+                    <% for( let index = 60; index < 80; index++ ) { %>
+                        <li class="addFont"> <%= allNames[index] %></li>
+                    <% } %>    
+                </ul>
+                <button class = "addFont btn btn-light mb-2" id="viewMore"> View all</button>
+            </div>
+            
+<!-- HIDDEN SYMBOLS  -->
+
+            <div class="col m-1 hidden ex">
+                <ul class = "list-unstyled">
+                    <% for( let index = 80; index < 100; index++ ) { %>
+                        <li class="addFont"> <%= allNames[index] %></li>
+                    <% } %>    
+                </ul>
+            </div>
+            <div class="col m-1 hidden ex">
+                <ul class = "list-unstyled">
+                    <% for( let index = 100; index < 120; index++ ) { %>
+                        <li class="addFont"> <%= allNames[index] %></li>
+                    <% } %>    
+                </ul>
+            </div>
+            <div class="col m-1 hidden ex">
+                <ul class = "list-unstyled">
+                    <% for( let index = 120; index < 140; index++ ) { %>
+                        <li class="addFont"> <%= allNames[index] %></li>
+                    <% } %>    
+                </ul>
+            </div>
+            <div class="col m-1 hidden ex">
+                <ul class = "list-unstyled">
+                    <% for( let index = 140; index < 160; index++ ) { %>
+                        <li class="addFont"> <%= allNames[index] %></li>
+                    <% } %>    
+                </ul>
+            </div>
+            <div class="col m-1 hidden ex">
+                <ul class = "list-unstyled">
+                    <% for( let index = 160; index < allNames.length; index++ ) { %>
+                        <li class="addFont"> <%= allNames[index] %></li>
+                    <% } %>    
+                </ul>
+                <button class = "hidden addFont btn btn-light mb-3" id="viewLess"> View less</button>
+            </div>
+
+        </div>
+
+        
+    </div>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>  
+    <script>
+        $("#viewMore").click(function(){
+            $("#viewMore").css("visibility","hidden");
+            $(".hidden").removeClass("hidden");
+            $("#viewLess").removeClass("hidden");
+        });
+
+        $("#viewLess").click(function(){
+            $("#viewMore").css("visibility","visible");
+            $(".ex").addClass("hidden");
+            $("#viewLess").addClass("hidden");
+        });
+        
+    </script>
 </body>
 
 </html>

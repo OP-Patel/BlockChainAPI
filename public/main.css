@@ -7,3 +7,20 @@
     justify-content: center;
 }
 
+li{
+    text-align: left;
+    display: block;
+}
+
+.hidden{
+    display: none; 
+}
+
+
+
+/* <ul class = "list-unstyled">
+<% for( let index = 0; index < allNames.length; index++ ) { %>
+    <li class="addFont"> <%= allNames[index] %></li>
+<% } %>
+
+</ul> */

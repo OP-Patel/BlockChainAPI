@@ -10,8 +10,15 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-app.get("/", (req, res) => {
-    res.render("index.ejs");
+app.get("/", async (req, res) => {
+    var allSyms = await axios.get(API_URL+"/symbols");
+    var totalSyms = [];
+
+    for (var key in allSyms.data){
+      totalSyms.push(key);
+    }
+    
+    res.render("index.ejs", {allNames: totalSyms});
   });
 
 app.post("/submit", async (req, res)=>{
