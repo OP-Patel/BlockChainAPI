@@ -17,10 +17,3 @@ li{
 }
 
 
-
-/* <ul class = "list-unstyled">
-<% for( let index = 0; index < allNames.length; index++ ) { %>
-    <li class="addFont"> <%= allNames[index] %></li>
-<% } %>
-
-</ul> */
