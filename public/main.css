@@ -24,11 +24,3 @@ footer{
     border: 2px solid #990000 !important
 }
 
-#footerRef{
-    background-color: transparent;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    outline: none;
-}

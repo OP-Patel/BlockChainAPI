@@ -16,7 +16,6 @@ for (var key in allSyms.data){
   totalSyms.push(key);
 }
 
-
 app.get("/", async (req, res) => {
     res.render("index.ejs", {allNames: totalSyms});
   });
@@ -48,6 +47,3 @@ app.post("/submit", async (req, res)=>{
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
   });
-
-
-export default totalSyms; 
