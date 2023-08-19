@@ -16,4 +16,3 @@ Website front-end is created with the use of CSS, jQuery/JS, and Bootstrap.
 
 <h2>Live Demo:</h2>
 
-In-depth demo click below or visit link:
